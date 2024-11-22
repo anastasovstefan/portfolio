@@ -1,0 +1,218 @@
+import React, { useState } from 'react';
+import { Menu, X, Phone, Mail, Home } from 'lucide-react';
+// Import your images
+import heroImage from '../images/hero.png';  // You'll add this image
+import project1 from '../images/living-room.png';  // You'll add this image
+import project2 from '../images/garden.png';  // You'll add this image
+import project3 from '../images/kitchen.png';  // You'll add this image
+
+const DesignWebsite = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const projects = [
+    { 
+      id: 1, 
+      title: 'Modern Living Room', 
+      type: 'Interior', 
+      image: project1,
+      description: 'Contemporary design with minimalist aesthetics'
+    },
+    { 
+      id: 2, 
+      title: 'Garden Landscape', 
+      type: 'Exterior', 
+      image: project2,
+      description: 'Sustainable garden design with native plants'
+    },
+    { 
+      id: 3, 
+      title: 'Kitchen Renovation', 
+      type: 'Interior', 
+      image: project3,
+      description: 'Modern kitchen with smart appliances'
+    }
+  ];
+
+  const services = [
+    {
+      id: 1,
+      title: 'Interior Design',
+      description: 'Complete interior design solutions for residential and commercial spaces',
+      icon: '🏠'
+    },
+    {
+      id: 2,
+      title: 'Landscape Design',
+      description: 'Beautiful and sustainable outdoor living spaces',
+      icon: '🌿'
+    },
+    {
+      id: 3,
+      title: 'Renovation',
+      description: 'Full-service renovation and remodeling projects',
+      icon: '🔨'
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gray-50 font-sans">
+            {/* Navigation */}
+        <nav className="fixed top-0 left-0 right-0 bg-white shadow-lg z-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="flex justify-between items-center h-16">
+            <div className="flex items-center space-x-2">
+              <Home className="h-6 w-6 text-blue-600" />
+              <span className="font-bold text-xl text-gray-900">Anastasov Design </span>
+            </div>
+            
+            <div className="hidden md:flex space-x-8">
+              {['Home', 'Services', 'Portfolio', 'Contact'].map((item) => (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase()}`}
+                  className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                >
+                  {item}
+                </a>
+              ))}
+            </div>
+
+            <button 
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden p-2 rounded-lg hover:bg-gray-100"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+        </div>
+
+        {isMenuOpen && (
+          <div className="md:hidden absolute w-full bg-white border-t">
+            <div className="px-2 pt-2 pb-3 space-y-1">
+              {['Home', 'Services', 'Portfolio', 'Contact'].map((item) => (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase()}`}
+                  className="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md"
+                >
+                  {item}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+      </nav>
+      {/* Hero Section with Background Image */}
+      <div 
+        className="relative bg-gray-900 text-white pt-32 pb-20 mt-16"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${heroImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            Transform Your Space
+          </h1>
+          <p className="text-xl mb-8 text-gray-300">
+            Interior and Exterior Design Solutions
+          </p>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transform transition-transform duration-200 hover:scale-105">
+            View Our Work
+          </button>
+        </div>
+      </div>
+
+        {/* Services Section */}
+        <div className="max-w-6xl mx-auto px-4 py-16" id="services">
+        <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
+          Our Services
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {services.map(service => (
+            <div 
+              key={service.id}
+              className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              <div className="text-4xl mb-4">{service.icon}</div>
+              <h3 className="text-xl font-bold mb-3 text-gray-900">{service.title}</h3>
+              <p className="text-gray-600">{service.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Portfolio Section with Image Gallery */}
+      <div className="max-w-6xl mx-auto px-4 py-16" id="portfolio">
+        <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
+          Our Projects
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {projects.map(project => (
+            <div 
+              key={project.id} 
+              className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-200 hover:scale-105"
+            >
+              <div className="relative h-64 overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-bold text-lg mb-2 text-gray-900">
+                  {project.title}
+                </h3>
+                <p className="text-gray-600 mb-2">{project.type} Design</p>
+                <p className="text-gray-500 text-sm">{project.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+        {/* Contact Section */}
+        <div className="bg-gray-100 py-16" id="contact">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
+            Contact Us
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-6 bg-white p-6 rounded-lg shadow-lg">
+              <div className="flex items-center space-x-4">
+                <Phone className="h-6 w-6 text-blue-600" />
+                <span className="text-gray-700">+389 77 589 637</span>
+              </div>
+              <div className="flex items-center space-x-4">
+                <Mail className="h-6 w-6 text-blue-600" />
+                <span className="text-gray-700">contact@anastasovdesign.com</span>
+              </div>
+            </div>
+            <form className="space-y-4 bg-white p-6 rounded-lg shadow-lg">
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none"
+              />
+              <input
+                type="email"
+                placeholder="Your Email"
+                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none"
+              />
+              <textarea
+                placeholder="Your Message"
+                className="w-full p-3 border border-gray-300 rounded-lg h-32 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none resize-none"
+              />
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transform transition-transform duration-200 hover:scale-105">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default DesignWebsite;
