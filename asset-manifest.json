@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/anastasovdesign/static/css/main.550e7a6b.css",
-    "main.js": "/anastasovdesign/static/js/main.6155f263.js",
-    "static/media/garden.png": "/anastasovdesign/static/media/garden.6172be89371c65db853e.png",
-    "static/media/kitchen.png": "/anastasovdesign/static/media/kitchen.d5bf9fe61ce11b6f3724.png",
-    "static/media/hero.png": "/anastasovdesign/static/media/hero.cfdce633d2637cb43893.png",
-    "static/media/living-room.png": "/anastasovdesign/static/media/living-room.8b1fd358ec53e76fa30c.png",
-    "index.html": "/anastasovdesign/index.html",
-    "main.550e7a6b.css.map": "/anastasovdesign/static/css/main.550e7a6b.css.map",
-    "main.6155f263.js.map": "/anastasovdesign/static/js/main.6155f263.js.map"
+    "main.css": "/portfolio/static/css/main.550e7a6b.css",
+    "main.js": "/portfolio/static/js/main.06f0676f.js",
+    "static/media/garden.png": "/portfolio/static/media/garden.6172be89371c65db853e.png",
+    "static/media/kitchen.png": "/portfolio/static/media/kitchen.d5bf9fe61ce11b6f3724.png",
+    "static/media/hero.png": "/portfolio/static/media/hero.cfdce633d2637cb43893.png",
+    "static/media/living-room.png": "/portfolio/static/media/living-room.8b1fd358ec53e76fa30c.png",
+    "index.html": "/portfolio/index.html",
+    "main.550e7a6b.css.map": "/portfolio/static/css/main.550e7a6b.css.map",
+    "main.06f0676f.js.map": "/portfolio/static/js/main.06f0676f.js.map"
   },
   "entrypoints": [
     "static/css/main.550e7a6b.css",
-    "static/js/main.6155f263.js"
+    "static/js/main.06f0676f.js"
   ]
 }
