@@ -33,24 +33,24 @@ const DesignWebsite = () => {
     }
   ];
 
-  const services = [
+  const renders = [
     {
       id: 1,
-      title: 'Interior Design',
-      description: 'Complete interior design solutions for residential and commercial spaces',
-      icon: '🏠'
+      title: 'Bachelor Degree in Architecture and Design',
+      description: 'University Goce Delcev',
+      icon: '🎓'
     },
     {
       id: 2,
-      title: 'Landscape Design',
-      description: 'Beautiful and sustainable outdoor living spaces',
-      icon: '🌿'
+      title: '5 Years of Work Experience',
+      description: 'Positions: Architect Designer/Architect',
+      icon: '💼'
     },
     {
       id: 3,
-      title: 'Renovation',
-      description: 'Full-service renovation and remodeling projects',
-      icon: '🔨'
+      title: 'Varios Skills',
+      description: 'AutoCad, SketchUp, Vray for SketchUp,Lumion 3D, Adobe Photoshop, Adobe Lightroom',
+      icon: '🚀'
     }
   ];
 
@@ -62,11 +62,11 @@ const DesignWebsite = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
               <Home className="h-6 w-6 text-blue-600" />
-              <span className="font-bold text-xl text-gray-900">Anastasov Design </span>
+              <span className="font-bold text-xl text-gray-900">Portfolio Design </span>
             </div>
             
             <div className="hidden md:flex space-x-8">
-              {['Home', 'Services', 'Portfolio', 'Contact'].map((item) => (
+              {['About me', 'Projects', 'University Projects', 'Detail Drawings', 'Contact'].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
@@ -89,7 +89,7 @@ const DesignWebsite = () => {
         {isMenuOpen && (
           <div className="md:hidden absolute w-full bg-white border-t">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              {['Home', 'Services', 'Portfolio', 'Contact'].map((item) => (
+              {['About me', 'Projects', 'University Projects', 'Detail Drawings', 'Contact'].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
@@ -118,19 +118,15 @@ const DesignWebsite = () => {
           <p className="text-xl mb-8 text-gray-300">
             Interior and Exterior Design Solutions
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transform transition-transform duration-200 hover:scale-105">
-            View Our Work
-          </button>
         </div>
       </div>
-
-        {/* Services Section */}
-        <div className="max-w-6xl mx-auto px-4 py-16" id="services">
+        {/* About me Section */}
+        <div className="max-w-6xl mx-auto px-4 py-16" id="about me">
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
-          Our Services
+          About me
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {services.map(service => (
+          {renders.map(service => (
             <div 
               key={service.id}
               className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
@@ -142,11 +138,69 @@ const DesignWebsite = () => {
           ))}
         </div>
       </div>
-
-      {/* Portfolio Section with Image Gallery */}
-      <div className="max-w-6xl mx-auto px-4 py-16" id="portfolio">
+        {/* Projects Section */}
+        <div className="max-w-6xl mx-auto px-4 py-16" id="projects">
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
-          Our Projects
+          Projects
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {projects.map(project => (
+            <div 
+              key={project.id} 
+              className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-200 hover:scale-105"
+            >
+              <div className="relative h-64 overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-bold text-lg mb-2 text-gray-900">
+                  {project.title}
+                </h3>
+                <p className="text-gray-600 mb-2">{project.type} Design</p>
+                <p className="text-gray-500 text-sm">{project.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* University Section */}
+      <div className="max-w-6xl mx-auto px-4 py-16" id="university projects">
+        <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
+          University Projects
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {projects.map(project => (
+            <div 
+              key={project.id} 
+              className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-200 hover:scale-105"
+            >
+              <div className="relative h-64 overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-bold text-lg mb-2 text-gray-900">
+                  {project.title}
+                </h3>
+                <p className="text-gray-600 mb-2">{project.type} Design</p>
+                <p className="text-gray-500 text-sm">{project.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+        {/* Detail drawings Section */}
+        <div className="max-w-6xl mx-auto px-4 py-16" id="detail drawings">
+        <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
+          Detail Drawings
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {projects.map(project => (
