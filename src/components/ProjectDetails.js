@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom'; // Use Link for routing instead of a href
 
 // Import your project images (you'll need to add these)
 import projectImage1 from '../images/1.jpg';
@@ -11,7 +12,9 @@ import projectImage6 from '../images/6.jpg';
 
 const ProjectDetails = () => {
   const { projectId } = useParams();
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   // Project details data
   const projectDetails = {
     1: {

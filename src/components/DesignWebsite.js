@@ -57,54 +57,6 @@ const DesignWebsite = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 font-sans">
-            {/* Navigation */}
-        <nav className="fixed top-0 left-0 right-0 bg-white shadow-lg z-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-2">
-            <a href="#hero" className="flex items-center space-x-2">
-              <Home className="h-6 w-6 text-blue-600" />
-              <span className="font-bold text-xl text-gray-900">Portfolio Design </span>
-            </a>
-            </div>
-            
-            <div className="hidden md:flex space-x-8">
-              {['About me', 'Projects', 'University Projects', 'Detail Drawings', 'Contact'].map((item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
-                >
-                  {item}
-                </a>
-              ))}
-            </div>
-
-            <button 
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 rounded-lg hover:bg-gray-100"
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-        </div>
-
-        {isMenuOpen && (
-          <div className="md:hidden absolute w-full bg-white border-t">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              {['About me', 'Projects', 'University Projects', 'Detail Drawings', 'Contact'].map((item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md"
-                >
-                  {item}
-                </a>
-              ))}
-            </div>
-          </div>
-        )}
-      </nav>
       {/* Hero Section with Background Image */}
       <div 
       id="hero"
@@ -125,7 +77,7 @@ const DesignWebsite = () => {
       </div>
     </div>
         {/* About me Section */}
-        <div className="max-w-6xl mx-auto px-4 py-16" id="about me">
+        <div className="max-w-6xl mx-auto px-4 py-16" id="about-me">
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
           About me
         </h2>
@@ -175,7 +127,7 @@ const DesignWebsite = () => {
       </div>
 
       {/* University Section */}
-      <div className="max-w-6xl mx-auto px-4 py-16" id="university projects">
+      <div className="max-w-6xl mx-auto px-4 py-16" id="university-projects">
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
           University Projects
         </h2>
@@ -204,7 +156,7 @@ const DesignWebsite = () => {
         </div>
       </div>
         {/* Detail drawings Section */}
-        <div className="max-w-6xl mx-auto px-4 py-16" id="detail drawings">
+        <div className="max-w-6xl mx-auto px-4 py-16" id="detail-drawings">
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
           Detail Drawings
         </h2>
