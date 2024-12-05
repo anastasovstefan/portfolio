@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, X, Phone, Mail, Home } from 'lucide-react';
 // Import your images
-import heroImage from '../images/hero.png';  // You'll add this image
+import heroImage from '../images/hero.jpg';  // You'll add this image
 import project1 from '../images/living-room.png';  // You'll add this image
 import project2 from '../images/garden.png';  // You'll add this image
 import project3 from '../images/kitchen.png';  // You'll add this image
@@ -61,8 +61,10 @@ const DesignWebsite = () => {
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
+            <a href="#hero" className="flex items-center space-x-2">
               <Home className="h-6 w-6 text-blue-600" />
               <span className="font-bold text-xl text-gray-900">Portfolio Design </span>
+            </a>
             </div>
             
             <div className="hidden md:flex space-x-8">
@@ -104,11 +106,14 @@ const DesignWebsite = () => {
       </nav>
       {/* Hero Section with Background Image */}
       <div 
-        className="relative bg-gray-900 text-white pt-32 pb-20 mt-16"
+        id="hero"
+        className="relative bg-gray-900 text-white min-h-screen w-full flex items-center justify-center overflow-hidden"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${heroImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
+          backgroundSize: '100% 100%',
+          backgroundPosition: 'center',
+          backgroundColor: 'black',
+          backgroundRepeat: 'no-repeat'
         }}
       >
         <div className="max-w-6xl mx-auto px-4 text-center">
@@ -227,7 +232,7 @@ const DesignWebsite = () => {
         </div>
       </div>
         {/* Contact Section */}
-        <div className="bg-gray-100 py-16" id="contact">
+        <div className="bg-gray-100 h-screen w-full flex items-center" id="contact">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
             Contact Us
