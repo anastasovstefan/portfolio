@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Menu, X, Phone, Mail, Home } from 'lucide-react';
+import { Link } from 'react-router-dom';
 // Import your images
 import heroImage from '../images/hero.jpg';  // You'll add this image
-import project1 from '../images/living-room.png';  // You'll add this image
-import project2 from '../images/garden.png';  // You'll add this image
-import project3 from '../images/kitchen.png';  // You'll add this image
+import project1 from '../images/1.jpg';  // You'll add this image
+import project2 from '../images/2.jpg';  // You'll add this image
+import project3 from '../images/3.jpg';  // You'll add this image
 
 const DesignWebsite = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -106,25 +107,23 @@ const DesignWebsite = () => {
       </nav>
       {/* Hero Section with Background Image */}
       <div 
-        id="hero"
-        className="relative bg-gray-900 text-white min-h-screen w-full flex items-center justify-center overflow-hidden"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${heroImage})`,
-          backgroundSize: '100% 100%',
-          backgroundPosition: 'center',
-          backgroundColor: 'black',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Transform Your Space
-          </h1>
-          <p className="text-xl mb-8 text-gray-300">
-            Interior and Exterior Design Solutions
-          </p>
-        </div>
+      id="hero"
+      className="relative w-full h-screen flex items-center justify-center overflow-hidden"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${heroImage})`,
+        backgroundSize: 'cover', 
+        backgroundPosition: 'center'
+      }}
+    >
+      <div className="max-w-6xl mx-auto px-4 text-center relative z-10">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight text-white">
+          Transform Your Space
+        </h1>
+        <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-gray-300">
+          Interior and Exterior Design Solutions
+        </p>
       </div>
+    </div>
         {/* About me Section */}
         <div className="max-w-6xl mx-auto px-4 py-16" id="about me">
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
@@ -154,6 +153,7 @@ const DesignWebsite = () => {
               key={project.id} 
               className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-200 hover:scale-105"
             >
+              <Link to={`/project/${project.id}`}>
               <div className="relative h-64 overflow-hidden">
                 <img 
                   src={project.image} 
@@ -168,6 +168,7 @@ const DesignWebsite = () => {
                 <p className="text-gray-600 mb-2">{project.type} Design</p>
                 <p className="text-gray-500 text-sm">{project.description}</p>
               </div>
+              </Link>
             </div>
           ))}
         </div>
