@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom'; // Use Link for routing instead of a href
+import Footer from './Footer';
 
 // Import your project images (you'll need to add these)
 import projectImage1 from '../images/1.jpg';
@@ -9,6 +9,20 @@ import projectImage3 from '../images/3.jpg';
 import projectImage4 from '../images/4.jpg';
 import projectImage5 from '../images/5.jpg';
 import projectImage6 from '../images/6.jpg';
+
+import projectImage7 from '../images/render1.jpg';
+import projectImage8 from '../images/render2.jpg';
+import projectImage9 from '../images/render3.jpg';
+import projectImage10 from '../images/render4.jpg';
+import projectImage11 from '../images/render5.jpg';
+import projectImage12 from '../images/render6.jpg';
+import projectImage13 from '../images/render7.jpg';
+import projectImage14 from '../images/render8.jpg';
+import projectImage15 from '../images/render9.jpg';
+
+import projectImage16 from '../images/bedroom1.jpg';
+import projectImage17 from '../images/bedroom2.jpg';
+import projectImage18 from '../images/bedroom3.jpg';
 
 const ProjectDetails = () => {
   const { projectId } = useParams();
@@ -30,6 +44,32 @@ const ProjectDetails = () => {
         projectImage6
       ]
     },
+    2: {
+        title: 'Modern Living Room',
+        type: 'Interior Design',
+        description: 'A contemporary living space that blends minimalist aesthetics with functional design.',
+        images: [
+          projectImage7,
+          projectImage8,
+          projectImage15,
+          projectImage10,
+          projectImage11,
+          projectImage12,
+          projectImage13,
+          projectImage14,
+          projectImage9
+        ]
+      },
+      3: {
+        title: 'Modern Living Room',
+        type: 'Interior Design',
+        description: 'A contemporary living space that blends minimalist aesthetics with functional design.',
+        images: [
+          projectImage16,
+          projectImage17,
+          projectImage18
+        ]
+      }
     // Add more project details as needed
   };
 
@@ -40,6 +80,7 @@ const ProjectDetails = () => {
   }
 
   return (
+    <div>
     <div className="container mx-auto px-4 py-16">
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">{project.title}</h1>
@@ -61,6 +102,9 @@ const ProjectDetails = () => {
           </div>
         ))}
       </div>
+      
+    </div>
+    <Footer/>
     </div>
   );
 };

@@ -19,6 +19,11 @@ const Navigation = () => {
         // If Home is clicked, navigate to the home page and scroll to the top
         navigate('/portfolio', { replace: true });
         window.scrollTo(0, 0); // Scroll to top directly without delay
+    } else if (id === 'contact') {
+      window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: 'smooth'
+      });
     } else if (location.pathname === '/portfolio') {
       // If already on the /portfolio page, scroll to the section
       scrollToSection(id);
@@ -51,11 +56,11 @@ const Navigation = () => {
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex space-x-8">
             {[
-              { label: 'About me', id: 'about-me' },
               { label: 'Projects', id: 'projects' },
               { label: 'University Projects', id: 'university-projects' },
               { label: 'Detail Drawings', id: 'detail-drawings' },
-              { label: 'Contact', id: 'contact' },
+              { label: 'About me', id: 'about-me' },
+              { label: 'Contact', id: 'contact' }
             ].map((item) => (
               <button
                 key={item.id}
@@ -82,11 +87,11 @@ const Navigation = () => {
         <div className="md:hidden absolute w-full bg-white border-t">
           <div className="px-2 pt-2 pb-3 space-y-1">
             {[
-              { label: 'About me', id: 'about-me' },
               { label: 'Projects', id: 'projects' },
               { label: 'University Projects', id: 'university-projects' },
               { label: 'Detail Drawings', id: 'detail-drawings' },
-              { label: 'Contact', id: 'contact' },
+              { label: 'About me', id: 'about-me' },
+              { label: 'Contact', id: 'contact' }
             ].map((item) => (
               <button
                 key={item.id}

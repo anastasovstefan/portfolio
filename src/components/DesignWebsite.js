@@ -3,9 +3,11 @@ import { Menu, X, Phone, Mail, Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
 // Import your images
 import heroImage from '../images/hero.jpg';  // You'll add this image
-import project1 from '../images/1.jpg';  // You'll add this image
+import project1 from '../images/bedroom2.jpg';  // You'll add this image
 import project2 from '../images/2.jpg';  // You'll add this image
 import project3 from '../images/3.jpg';  // You'll add this image
+import project4 from '../images/render9.jpg';  // You'll add this image
+import Footer from './Footer';
 
 const DesignWebsite = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,21 +17,69 @@ const DesignWebsite = () => {
       id: 1, 
       title: 'Modern Living Room', 
       type: 'Interior', 
-      image: project1,
+      image: project3,
       description: 'Contemporary design with minimalist aesthetics'
     },
     { 
       id: 2, 
       title: 'Garden Landscape', 
       type: 'Exterior', 
-      image: project2,
+      image: project4,
       description: 'Sustainable garden design with native plants'
     },
     { 
       id: 3, 
       title: 'Kitchen Renovation', 
       type: 'Interior', 
+      image: project1,
+      description: 'Modern kitchen with smart appliances'
+    }
+  ];
+
+  const university = [
+    { 
+      id: 1, 
+      title: 'Modern Living Room', 
+      type: 'Interior', 
       image: project3,
+      description: 'Contemporary design with minimalist aesthetics'
+    },
+    { 
+      id: 2, 
+      title: 'Garden Landscape', 
+      type: 'Exterior', 
+      image: project4,
+      description: 'Sustainable garden design with native plants'
+    },
+    { 
+      id: 3, 
+      title: 'Kitchen Renovation', 
+      type: 'Interior', 
+      image: project1,
+      description: 'Modern kitchen with smart appliances'
+    }
+  ];
+
+  const drawings = [
+    { 
+      id: 1, 
+      title: 'Modern Living Room', 
+      type: 'Interior', 
+      image: project3,
+      description: 'Contemporary design with minimalist aesthetics'
+    },
+    { 
+      id: 2, 
+      title: 'Garden Landscape', 
+      type: 'Exterior', 
+      image: project4,
+      description: 'Sustainable garden design with native plants'
+    },
+    { 
+      id: 3, 
+      title: 'Kitchen Renovation', 
+      type: 'Interior', 
+      image: project1,
       description: 'Modern kitchen with smart appliances'
     }
   ];
@@ -76,24 +126,6 @@ const DesignWebsite = () => {
         </p>
       </div>
     </div>
-        {/* About me Section */}
-        <div className="max-w-6xl mx-auto px-4 py-16" id="about-me">
-        <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
-          About me
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {renders.map(service => (
-            <div 
-              key={service.id}
-              className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-            >
-              <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">{service.title}</h3>
-              <p className="text-gray-600">{service.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
         {/* Projects Section */}
         <div className="max-w-6xl mx-auto px-4 py-16" id="projects">
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
@@ -105,7 +137,7 @@ const DesignWebsite = () => {
               key={project.id} 
               className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-200 hover:scale-105"
             >
-              <Link to={`/project/${project.id}`}>
+              <Link to={`/portfolio/project/${project.id}`}>
               <div className="relative h-64 overflow-hidden">
                 <img 
                   src={project.image} 
@@ -132,11 +164,12 @@ const DesignWebsite = () => {
           University Projects
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {projects.map(project => (
+          {university.map(project => (
             <div 
               key={project.id} 
               className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-200 hover:scale-105"
             >
+              <Link to={`/portfolio/project2/${project.id}`}>
               <div className="relative h-64 overflow-hidden">
                 <img 
                   src={project.image} 
@@ -151,6 +184,7 @@ const DesignWebsite = () => {
                 <p className="text-gray-600 mb-2">{project.type} Design</p>
                 <p className="text-gray-500 text-sm">{project.description}</p>
               </div>
+              </Link>
             </div>
           ))}
         </div>
@@ -166,6 +200,7 @@ const DesignWebsite = () => {
               key={project.id} 
               className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-200 hover:scale-105"
             >
+              <Link to={`/portfolio/drawings/${project.id}`}>
               <div className="relative h-64 overflow-hidden">
                 <img 
                   src={project.image} 
@@ -180,49 +215,31 @@ const DesignWebsite = () => {
                 <p className="text-gray-600 mb-2">{project.type} Design</p>
                 <p className="text-gray-500 text-sm">{project.description}</p>
               </div>
+            </Link>
+            </div>
+          ))}
+        </div>
+      </div>
+      {/* About me Section */}
+      <div className="max-w-6xl mx-auto px-4 py-16" id="about-me">
+        <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
+          About me
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {renders.map(service => (
+            <div 
+              key={service.id}
+              className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              <div className="text-4xl mb-4">{service.icon}</div>
+              <h3 className="text-xl font-bold mb-3 text-gray-900">{service.title}</h3>
+              <p className="text-gray-600">{service.description}</p>
             </div>
           ))}
         </div>
       </div>
         {/* Contact Section */}
-        <div className="bg-gray-100 h-screen w-full flex items-center" id="contact">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
-            Contact Us
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-6 bg-white p-6 rounded-lg shadow-lg">
-              <div className="flex items-center space-x-4">
-                <Phone className="h-6 w-6 text-blue-600" />
-                <span className="text-gray-700">+389 77 589 637</span>
-              </div>
-              <div className="flex items-center space-x-4">
-                <Mail className="h-6 w-6 text-blue-600" />
-                <span className="text-gray-700">contact@anastasovdesign.com</span>
-              </div>
-            </div>
-            <form className="space-y-4 bg-white p-6 rounded-lg shadow-lg">
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none"
-              />
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none"
-              />
-              <textarea
-                placeholder="Your Message"
-                className="w-full p-3 border border-gray-300 rounded-lg h-32 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none resize-none"
-              />
-              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transform transition-transform duration-200 hover:scale-105">
-                Send Message
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
+      <Footer/>
     </div>
   );
 };
