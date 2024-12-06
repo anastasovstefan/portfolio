@@ -1,28 +1,15 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import Footer from './Footer';
 
 // Import your project images (you'll need to add these)
-import projectImage1 from '../images/1.jpg';
-import projectImage2 from '../images/2.jpg';
-import projectImage3 from '../images/3.jpg';
-import projectImage4 from '../images/4.jpg';
-import projectImage5 from '../images/5.jpg';
-import projectImage6 from '../images/6.jpg';
+import projectImage1 from '../images/drawing1.png';
+import projectImage2 from '../images/drawing2.png';
+import projectImage3 from '../images/drawing.png';
+import projectImage4 from '../images/drawing3.png';
+import projectImage5 from '../images/drawing4.png';
 
-import projectImage7 from '../images/render1.jpg';
-import projectImage8 from '../images/render2.jpg';
-import projectImage9 from '../images/render3.jpg';
-import projectImage10 from '../images/render4.jpg';
-import projectImage11 from '../images/render5.jpg';
-import projectImage12 from '../images/render6.jpg';
-import projectImage13 from '../images/render7.jpg';
-import projectImage14 from '../images/render8.jpg';
-import projectImage15 from '../images/render9.jpg';
 
-import projectImage16 from '../images/bedroom1.jpg';
-import projectImage17 from '../images/bedroom2.jpg';
-import projectImage18 from '../images/bedroom3.jpg';
-import Footer from './Footer';
 
 const Drawings = () => {
   const { projectId } = useParams();
@@ -36,12 +23,9 @@ const Drawings = () => {
       type: 'Interior Design',
       description: 'A contemporary living space that blends minimalist aesthetics with functional design.',
       images: [
-        projectImage1,
-        projectImage2,
         projectImage3,
-        projectImage4,
-        projectImage5,
-        projectImage6
+        projectImage1,
+        projectImage2
       ]
     },
     2: {
@@ -49,15 +33,9 @@ const Drawings = () => {
         type: 'Interior Design',
         description: 'A contemporary living space that blends minimalist aesthetics with functional design.',
         images: [
-          projectImage7,
-          projectImage8,
-          projectImage15,
-          projectImage10,
-          projectImage11,
-          projectImage12,
-          projectImage13,
-          projectImage14,
-          projectImage9
+          projectImage4,
+          projectImage5
+          
         ]
       },
       3: {
@@ -65,9 +43,7 @@ const Drawings = () => {
         type: 'Interior Design',
         description: 'A contemporary living space that blends minimalist aesthetics with functional design.',
         images: [
-          projectImage16,
-          projectImage17,
-          projectImage18
+          projectImage1
         ]
       }
     // Add more project details as needed

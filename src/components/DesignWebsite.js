@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
-import { Menu, X, Phone, Mail, Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
 // Import your images
 import heroImage from '../images/hero.jpg';  // You'll add this image
 import project1 from '../images/bedroom2.jpg';  // You'll add this image
-import project2 from '../images/2.jpg';  // You'll add this image
+import project2 from '../images/drawing.png';  // You'll add this image
 import project3 from '../images/3.jpg';  // You'll add this image
 import project4 from '../images/render9.jpg';  // You'll add this image
+import project5 from '../images/drawing3.png';  // You'll add this image
+import project6 from '../images/park/3.jpg';  // You'll add this image
+import project7 from '../images/restorant/render 1.jpg';  // You'll add this image
 import Footer from './Footer';
 
 const DesignWebsite = () => {
@@ -15,72 +17,58 @@ const DesignWebsite = () => {
   const projects = [
     { 
       id: 1, 
-      title: 'Modern Living Room', 
+      title: 'Modern Apartment', 
       type: 'Interior', 
       image: project3,
-      description: 'Contemporary design with minimalist aesthetics'
+      description: 'Click here to see more'
     },
     { 
       id: 2, 
-      title: 'Garden Landscape', 
-      type: 'Exterior', 
+      title: 'Modern Apartment', 
+      type: 'Interior', 
       image: project4,
-      description: 'Sustainable garden design with native plants'
+      description: 'Click here to see more'
     },
     { 
       id: 3, 
-      title: 'Kitchen Renovation', 
+      title: 'Modern Bedroom', 
       type: 'Interior', 
       image: project1,
-      description: 'Modern kitchen with smart appliances'
+      description: 'Click here to see more'
     }
   ];
 
   const university = [
     { 
       id: 1, 
-      title: 'Modern Living Room', 
+      title: 'Restaurant', 
       type: 'Interior', 
-      image: project3,
-      description: 'Contemporary design with minimalist aesthetics'
+      image: project7,
+      description: 'Click here to see more'
     },
     { 
       id: 2, 
-      title: 'Garden Landscape', 
+      title: 'Park', 
       type: 'Exterior', 
-      image: project4,
-      description: 'Sustainable garden design with native plants'
-    },
-    { 
-      id: 3, 
-      title: 'Kitchen Renovation', 
-      type: 'Interior', 
-      image: project1,
-      description: 'Modern kitchen with smart appliances'
+      image: project6,
+      description: 'Click here to see more'
     }
   ];
 
   const drawings = [
     { 
       id: 1, 
-      title: 'Modern Living Room', 
+      title: 'Apartment/Carpentry Drawings', 
       type: 'Interior', 
-      image: project3,
-      description: 'Contemporary design with minimalist aesthetics'
+      image: project2,
+      description: 'Click here to see more'
     },
     { 
       id: 2, 
-      title: 'Garden Landscape', 
+      title: 'House Drawing', 
       type: 'Exterior', 
-      image: project4,
-      description: 'Sustainable garden design with native plants'
-    },
-    { 
-      id: 3, 
-      title: 'Kitchen Renovation', 
-      type: 'Interior', 
-      image: project1,
-      description: 'Modern kitchen with smart appliances'
+      image: project5,
+      description: 'Click here to see more'
     }
   ];
 
@@ -195,7 +183,7 @@ const DesignWebsite = () => {
           Detail Drawings
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {projects.map(project => (
+          {drawings.map(project => (
             <div 
               key={project.id} 
               className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-200 hover:scale-105"
