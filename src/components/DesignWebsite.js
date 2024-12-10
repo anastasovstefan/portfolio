@@ -3,13 +3,16 @@ import { Link } from 'react-router-dom';
 // Import your images
 import heroImage from '../images/hero.jpg';  // You'll add this image
 import project1 from '../images/bedroom2.jpg';  // You'll add this image
-import project2 from '../images/drawing.png';  // You'll add this image
+import project2 from '../images/drawing1.png';  // You'll add this image
 import project3 from '../images/3.jpg';  // You'll add this image
 import project4 from '../images/render9.jpg';  // You'll add this image
 import project5 from '../images/drawing3.png';  // You'll add this image
 import project6 from '../images/park/3.jpg';  // You'll add this image
 import project7 from '../images/restorant/render 1.jpg';  // You'll add this image
+import project8 from '../images/drawing5.jpg';  // You'll add this image
+import project9 from '../images/bath/1.jpg';  // You'll add this image
 import Footer from './Footer';
+import { ArrowDown } from 'lucide-react';
 
 const DesignWebsite = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,23 +20,30 @@ const DesignWebsite = () => {
   const projects = [
     { 
       id: 1, 
-      title: 'Modern Apartment', 
-      type: 'Interior', 
+      title: 'Sleek and Sophisticated Apartment', 
+      type: 'This apartment design features a modern, minimalist aesthetic with a combination of muted tones and natural wood elements.', 
       image: project3,
       description: 'Click here to see more'
     },
     { 
       id: 2, 
-      title: 'Modern Apartment', 
-      type: 'Interior', 
+      title: 'Elegant and Refined Living', 
+      type: 'This interior design showcases a harmonious blend of modern and luxury elements.', 
       image: project4,
       description: 'Click here to see more'
     },
     { 
       id: 3, 
-      title: 'Modern Bedroom', 
-      type: 'Interior', 
+      title: 'Serene Bedroom Retreat', 
+      type: 'Modern and cozy bedroom design with a mix of natural wood, plush textiles, and sleek lighting.', 
       image: project1,
+      description: 'Click here to see more'
+    },
+    { 
+      id: 4, 
+      title: 'Modern Bathroom Oasis', 
+      type: 'This minimalist bathroom design features a combination of sleek, modern elements and warm, natural wood accents.', 
+      image: project9,
       description: 'Click here to see more'
     }
   ];
@@ -58,9 +68,9 @@ const DesignWebsite = () => {
   const drawings = [
     { 
       id: 1, 
-      title: 'Apartment/Carpentry Drawings', 
+      title: 'Electricity and Lightning Drawings', 
       type: 'Interior', 
-      image: project2,
+      image: project8,
       description: 'Click here to see more'
     },
     { 
@@ -68,6 +78,13 @@ const DesignWebsite = () => {
       title: 'House Drawing', 
       type: 'Exterior', 
       image: project5,
+      description: 'Click here to see more'
+    },
+    { 
+      id: 3, 
+      title: 'Carpentry Drawings', 
+      type: 'Interior', 
+      image: project2,
       description: 'Click here to see more'
     }
   ];
@@ -107,11 +124,17 @@ const DesignWebsite = () => {
     >
       <div className="max-w-6xl mx-auto px-4 text-center relative z-10">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight text-white">
-          Transform Your Space
+          Creative Space Innovations
         </h1>
         <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-gray-300">
-          Interior and Exterior Design Solutions
+          Composing Environments That Breathe, Whisper, and Inspire
         </p>
+        <div className="flex justify-center">
+          <a href="#projects" className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center group">
+            Get Started
+            <ArrowDown className="ml-2 group-hover:translate-x-1 transition-transform" />
+          </a>
+        </div>
       </div>
     </div>
         {/* Projects Section */}
@@ -137,7 +160,7 @@ const DesignWebsite = () => {
                 <h3 className="font-bold text-lg mb-2 text-gray-900">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 mb-2">{project.type} Design</p>
+                <p className="text-gray-600 mb-2">{project.type}</p>
                 <p className="text-gray-500 text-sm">{project.description}</p>
               </div>
               </Link>

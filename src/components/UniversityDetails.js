@@ -89,11 +89,18 @@ const UniversityDetails = () => {
             key={index} 
             className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
           >
+            <a
+            href={image} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="block"
+            >
             <img 
               src={image} 
               alt={`${project.title} Design ${index + 1}`} 
               className="w-full h-64 object-contain transform transition-transform duration-500 group-hover:scale-110"
             />
+            </a>
           </div>
         ))}
       </div>

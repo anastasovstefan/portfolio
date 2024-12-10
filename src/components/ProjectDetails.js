@@ -24,6 +24,9 @@ import projectImage16 from '../images/bedroom1.jpg';
 import projectImage17 from '../images/bedroom2.jpg';
 import projectImage18 from '../images/bedroom3.jpg';
 
+import projectImage19 from '../images/bath/1.jpg';  // You'll add this image
+import projectImage20 from '../images/bath/2.jpg';  // You'll add this image
+
 const ProjectDetails = () => {
   const { projectId } = useParams();
   useEffect(() => {
@@ -32,9 +35,9 @@ const ProjectDetails = () => {
   // Project details data
   const projectDetails = {
     1: {
-      title: 'Modern Living Room',
+      title: 'Sleek and Sophisticated Apartment',
       type: 'Interior Design',
-      description: 'A contemporary living space that blends minimalist aesthetics with functional design.',
+      description: 'This design features a modern, minimalist aesthetic with a combination of muted tones, natural wood elements, and striking marble accents that create a clean, harmonious, and visually appealing space.',
       images: [
         projectImage1,
         projectImage2,
@@ -45,9 +48,9 @@ const ProjectDetails = () => {
       ]
     },
     2: {
-        title: 'Modern Living Room',
+        title: 'Elegant and Refined Living',
         type: 'Interior Design',
-        description: 'A contemporary living space that blends minimalist aesthetics with functional design.',
+        description: 'This interior design showcases a harmonious blend of modern and luxury elements, creating a warm and inviting living space.',
         images: [
           projectImage7,
           projectImage8,
@@ -61,13 +64,22 @@ const ProjectDetails = () => {
         ]
       },
       3: {
-        title: 'Modern Living Room',
+        title: 'Serene Bedroom Retreat',
         type: 'Interior Design',
-        description: 'A contemporary living space that blends minimalist aesthetics with functional design.',
+        description: 'Modern and cozy bedroom with mix of natural wood, plush textiles, and sleek lighting, creating a tranquil and inviting space for rest and relaxation.',
         images: [
           projectImage16,
           projectImage17,
           projectImage18
+        ]
+      },
+      4: {
+        title: 'Modern Bathroom Oasis',
+        type: 'Interior Design',
+        description: ' This minimalist bathroom design features a combination of sleek, modern elements and warm, natural wood accents, creating a serene and visually appealing space.',
+        images: [
+          projectImage19,
+          projectImage20
         ]
       }
     // Add more project details as needed
@@ -94,11 +106,18 @@ const ProjectDetails = () => {
             key={index} 
             className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
           >
+            <a
+            href={image} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="block"
+            >
             <img 
               src={image} 
               alt={`${project.title} Design ${index + 1}`} 
               className="w-full h-64 object-contain transform transition-transform duration-500 group-hover:scale-110"
             />
+            </a>
           </div>
         ))}
       </div>

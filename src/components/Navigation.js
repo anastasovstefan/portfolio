@@ -1,40 +1,11 @@
 import React, { useState } from 'react';
 import { Menu, X, Home } from 'lucide-react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { useHandleNavClick } from '../functions/HandleNavigation';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const handleNavClick = (id) => {
-    if (id === 'home') {
-        // If Home is clicked, navigate to the home page and scroll to the top
-        navigate('/portfolio', { replace: true });
-        window.scrollTo(0, 0); // Scroll to top directly without delay
-    } else if (id === 'contact') {
-      window.scrollTo({
-        top: document.documentElement.scrollHeight,
-        behavior: 'smooth'
-      });
-    } else if (location.pathname === '/portfolio') {
-      // If already on the /portfolio page, scroll to the section
-      scrollToSection(id);
-    } else {
-      // Otherwise, navigate to /portfolio and then scroll to the section
-      navigate('/portfolio');
-      setTimeout(() => {
-        scrollToSection(id);
-      }, 100); // Add a small delay to allow page rendering
-    }
-  };
+  const handleNavClick = useHandleNavClick();
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white shadow-lg z-50">
@@ -49,7 +20,7 @@ const Navigation = () => {
             onClick={() => handleNavClick('home')} // Add this click handler for Home
          >
             <Home className="h-6 w-6 text-blue-600" />
-            <span className="font-bold text-xl text-gray-900">Portfolio Design</span>
+            <span className="font-bold text-gray-700 hover:text-blue-600 transition-colors duration-200">Home</span>
         </Link>
           </div>
 

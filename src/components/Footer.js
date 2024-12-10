@@ -2,14 +2,17 @@ import React from 'react';
 import { 
   Facebook, 
   Instagram, 
-  Twitter, 
+  Twitter,
+  Linkedin, 
   MapPin, 
   Phone, 
   Mail 
 } from 'lucide-react';
+import { useHandleNavClick } from '../functions/HandleNavigation';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const handleNavClick = useHandleNavClick();
 
   return (
     <footer className="bg-gray-900 text-white py-12">
@@ -23,7 +26,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://facebook.com" 
+                href="https://www.facebook.com/stefko.anastasov.9/?locale=mk_MK" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-gray-400 hover:text-white transition-colors"
@@ -31,7 +34,7 @@ const Footer = () => {
                 <Facebook size={24} />
               </a>
               <a 
-                href="https://instagram.com" 
+                href="https://www.instagram.com/anastasov.stefan/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-gray-400 hover:text-white transition-colors"
@@ -39,12 +42,12 @@ const Footer = () => {
                 <Instagram size={24} />
               </a>
               <a 
-                href="https://twitter.com" 
+                href="https://mk.linkedin.com/in/stefan-anastasov-51b2842b5?trk=people-guest_people_search-card" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-gray-400 hover:text-white transition-colors"
               >
-                <Twitter size={24} />
+                <Linkedin size={24} />
               </a>
             </div>
           </div>
@@ -53,30 +56,20 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li>
-                <a 
-                  href="#about-me" 
-                  className="text-gray-400 hover:text-white transition-colors"
+            {[
+                { label: 'About Me', id: 'about-me' },
+                { label: 'Projects', id: 'projects' },
+                { label: 'University Projects', id: 'university-projects' },
+            ].map((item) => (
+                <li key={item.id} id={item.id}>
+                <button
+                    className = "text-gray-400 hover:text-white transition-colors"
+                    onClick={() => handleNavClick(item.id)}
                 >
-                  About Me
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="#projects" 
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="#university-projects" 
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  University Projects
-                </a>
-              </li>
+                    {item.label}
+                </button>
+                </li>
+            ))}
             </ul>
           </div>
 
@@ -86,15 +79,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <MapPin size={20} className="text-blue-500" />
-                <span className="text-gray-400">Shtip, North Macedonia</span>
+                <span className="text-gray-400">Radovis, North Macedonia</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone size={20} className="text-blue-500" />
-                <span className="text-gray-400">+389 77 589 637</span>
+                <span className="text-gray-400">+389 78 893 768</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={20} className="text-blue-500" />
-                <span className="text-gray-400">contact@anastasovdesign.com</span>
+                <span className="text-gray-400">stefan.anastasov97@hotmail.com</span>
               </div>
             </div>
           </div>

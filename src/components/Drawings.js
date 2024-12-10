@@ -5,7 +5,7 @@ import Footer from './Footer';
 // Import your project images (you'll need to add these)
 import projectImage1 from '../images/drawing1.png';
 import projectImage2 from '../images/drawing2.png';
-import projectImage3 from '../images/drawing.png';
+import projectImage3 from '../images/drawing5.jpg';
 import projectImage4 from '../images/drawing3.png';
 import projectImage5 from '../images/drawing4.png';
 
@@ -23,9 +23,7 @@ const Drawings = () => {
       type: 'Interior Design',
       description: 'A contemporary living space that blends minimalist aesthetics with functional design.',
       images: [
-        projectImage3,
-        projectImage1,
-        projectImage2
+        projectImage3
       ]
     },
     2: {
@@ -43,7 +41,8 @@ const Drawings = () => {
         type: 'Interior Design',
         description: 'A contemporary living space that blends minimalist aesthetics with functional design.',
         images: [
-          projectImage1
+          projectImage1,
+          projectImage2
         ]
       }
     // Add more project details as needed
@@ -70,11 +69,18 @@ const Drawings = () => {
             key={index} 
             className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
           >
+            <a
+            href={image} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="block"
+            >
             <img 
               src={image} 
               alt={`${project.title} Design ${index + 1}`} 
               className="w-full h-64 object-contain transform transition-transform duration-500 group-hover:scale-110"
             />
+            </a>
           </div>
         ))}
       </div>
