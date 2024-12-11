@@ -29,9 +29,9 @@ const UniversityDetails = () => {
   // Project details data
   const projectDetails = {
     1: {
-      title: 'Modern Living Room',
+      title: 'Vibrant and Chic Lounge',
       type: 'Interior Design',
-      description: 'A contemporary living space that blends minimalist aesthetics with functional design.',
+      description: 'Restaurant design with a vibrant blend of bold colors, geometric patterns, and sleek modern furnishings, creating an inviting and stylish atmosphere for wine enthusiasts to enjoy an elevated dining and drinking experience.',
       images: [
         projectImage1,
         projectImage2,
@@ -40,9 +40,9 @@ const UniversityDetails = () => {
       ]
     },
     2: {
-        title: 'Modern Living Room',
-        type: 'Interior Design',
-        description: 'A contemporary living space that blends minimalist aesthetics with functional design.',
+        title: 'Community Recreation Park',
+        type: 'Exterior Design',
+        description: 'This outdoor park design represents a visually striking blend of modern architecture, lush greenery, and whimsical play structures, creating an inviting space for visitors of all ages to explore, relax, and enjoy various recreational activities.',
         images: [
           projectImage5,
           projectImage6,  

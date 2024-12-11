@@ -21,7 +21,7 @@ const DesignWebsite = () => {
     { 
       id: 1, 
       title: 'Sleek and Sophisticated Apartment', 
-      type: 'This apartment design features a modern, minimalist aesthetic with a combination of muted tones and natural wood elements.', 
+      type: 'Apartment design that features a modern, minimalist aesthetic with a combination of muted tones and natural wood elements.', 
       image: project3,
       description: 'Click here to see more'
     },
@@ -51,15 +51,15 @@ const DesignWebsite = () => {
   const university = [
     { 
       id: 1, 
-      title: 'Restaurant', 
-      type: 'Interior', 
+      title: 'Vibrant and Chic Lounge', 
+      type: 'Restaurant design with a vibrant blend of bold colors, geometric patterns, and sleek modern furnishings.', 
       image: project7,
       description: 'Click here to see more'
     },
     { 
       id: 2, 
-      title: 'Park', 
-      type: 'Exterior', 
+      title: 'Community Recreation Park', 
+      type: 'This outdoor park design represents a visually striking blend of modern architecture.', 
       image: project6,
       description: 'Click here to see more'
     }
@@ -68,22 +68,22 @@ const DesignWebsite = () => {
   const drawings = [
     { 
       id: 1, 
-      title: 'Electricity and Lightning Drawings', 
-      type: 'Interior', 
+      title: 'Electrical and Lighting Layout Plan', 
+      type: 'A detailed residential floor plan illustrating the layout of electrical outlets, switches, and lighting fixtures for each room.', 
       image: project8,
       description: 'Click here to see more'
     },
     { 
       id: 2, 
-      title: 'House Drawing', 
-      type: 'Exterior', 
+      title: 'Residential Electrical Layout', 
+      type: 'A complete residential electrical plan covering all rooms, including bedrooms, bathrooms, and common areas.', 
       image: project5,
       description: 'Click here to see more'
     },
     { 
       id: 3, 
-      title: 'Carpentry Drawings', 
-      type: 'Interior', 
+      title: 'Carpentry Layout', 
+      type: 'Carpentry plan detailing design of cabinets, furniture, and wooden elements for optimized space utilization.', 
       image: project2,
       description: 'Click here to see more'
     }
@@ -192,7 +192,7 @@ const DesignWebsite = () => {
                 <h3 className="font-bold text-lg mb-2 text-gray-900">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 mb-2">{project.type} Design</p>
+                <p className="text-gray-600 mb-2">{project.type}</p>
                 <p className="text-gray-500 text-sm">{project.description}</p>
               </div>
               </Link>
@@ -223,7 +223,7 @@ const DesignWebsite = () => {
                 <h3 className="font-bold text-lg mb-2 text-gray-900">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 mb-2">{project.type} Design</p>
+                <p className="text-gray-600 mb-2">{project.type}</p>
                 <p className="text-gray-500 text-sm">{project.description}</p>
               </div>
             </Link>

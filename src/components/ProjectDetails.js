@@ -37,7 +37,7 @@ const ProjectDetails = () => {
     1: {
       title: 'Sleek and Sophisticated Apartment',
       type: 'Interior Design',
-      description: 'This design features a modern, minimalist aesthetic with a combination of muted tones, natural wood elements, and striking marble accents that create a clean, harmonious, and visually appealing space.',
+      description: 'Apartment design that features a modern, minimalist aesthetic with a combination of muted tones, natural wood elements, and striking marble accents that create a clean, harmonious, and visually appealing space.',
       images: [
         projectImage1,
         projectImage2,

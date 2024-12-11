@@ -19,17 +19,17 @@ const Drawings = () => {
   // Project details data
   const projectDetails = {
     1: {
-      title: 'Modern Living Room',
-      type: 'Interior Design',
-      description: 'A contemporary living space that blends minimalist aesthetics with functional design.',
+      title: 'Electrical and Lighting Layout Plan',
+      type: '',
+      description: 'A detailed residential floor plan illustrating the layout of electrical outlets, switches, and lighting fixtures for each room.',
       images: [
         projectImage3
       ]
     },
     2: {
-        title: 'Modern Living Room',
-        type: 'Interior Design',
-        description: 'A contemporary living space that blends minimalist aesthetics with functional design.',
+        title: 'Residential Electrical Layout',
+        type: '',
+        description: 'A complete residential electrical plan covering all rooms, including bedrooms, bathrooms, and common areas, with labeled fixtures, switches, and their connections.',
         images: [
           projectImage4,
           projectImage5
@@ -37,9 +37,9 @@ const Drawings = () => {
         ]
       },
       3: {
-        title: 'Modern Living Room',
-        type: 'Interior Design',
-        description: 'A contemporary living space that blends minimalist aesthetics with functional design.',
+        title: 'Carpentry Layout',
+        type: '',
+        description: 'Carpentry plan detailing design of cabinets, furniture, and wooden elements for optimized space utilization.',
         images: [
           projectImage1,
           projectImage2

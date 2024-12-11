@@ -29,7 +29,7 @@ const Navigation = () => {
             {[
               { label: 'Projects', id: 'projects' },
               { label: 'University Projects', id: 'university-projects' },
-              { label: 'Detail Drawings', id: 'detail-drawings' },
+              { label: 'Sketches', id: 'detail-drawings' },
               { label: 'About me', id: 'about-me' },
               { label: 'Contact', id: 'contact' }
             ].map((item) => (
@@ -60,7 +60,7 @@ const Navigation = () => {
             {[
               { label: 'Projects', id: 'projects' },
               { label: 'University Projects', id: 'university-projects' },
-              { label: 'Detail Drawings', id: 'detail-drawings' },
+              { label: 'Sketches', id: 'detail-drawings' },
               { label: 'About me', id: 'about-me' },
               { label: 'Contact', id: 'contact' }
             ].map((item) => (
