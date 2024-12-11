@@ -104,7 +104,7 @@ const DesignWebsite = () => {
     },
     {
       id: 3,
-      title: 'Varios Skills',
+      title: 'Various Skills',
       description: 'AutoCad, SketchUp, Vray for SketchUp,Lumion 3D, Adobe Photoshop, Adobe Lightroom',
       icon: '🚀'
     }
